@@ -1,0 +1,23 @@
+print("Welcome to the Band Name Generator.")
+
+# Get user inputs for city and pet name
+city = input("What's the name of the city you grew up in?\n")
+pet = input("What's your pet's name?\n")
+
+# Get additional inputs for noun, pronoun, and verb
+noun = input("Enter a noun:\n")
+pronoun = input("Enter a pronoun:\n")
+verb = input("Enter a verb:\n")
+
+# Generate band names using the provided inputs
+band_name1 = f"The {city} {noun}"
+band_name2 = f"{verb.capitalize()} {pet}"
+band_name3 = f"{pronoun.capitalize()} {city} {noun}"
+band_name4 = f"{pet} and the {noun}"
+
+# Print out the possible band names
+print("Your band name could be one of the following:")
+print(band_name1)
+print(band_name2)
+print(band_name3)
+print(band_name4)
