@@ -1,0 +1,46 @@
+print("Thank you for choosing Python Pizza Deliveries!")
+
+# Prompt the user to choose the pizza size
+size = input("What size pizza do you want? (S, M, L)\n").upper()
+
+# Prompt the user to choose toppings
+add_pepperoni = input("Do you want pepperoni? (Y/N)\n").upper()
+add_mushrooms = input("Do you want mushrooms? (Y/N)\n").upper()
+add_olives = input("Do you want olives? (Y/N)\n").upper()
+extra_cheese = input("Do you want extra cheese? (Y/N)\n").upper()
+
+# Initialize the bill
+bill = 0
+
+# Calculate the base price of the pizza based on size
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
+else:
+    print("Invalid pizza size. Please restart the order.")
+    exit()
+
+# Add the cost of pepperoni if selected
+if add_pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+
+# Add the cost of mushrooms if selected
+if add_mushrooms == "Y":
+    bill += 2
+
+# Add the cost of olives if selected
+if add_olives == "Y":
+    bill += 1.5
+
+# Add the cost of extra cheese if selected
+if extra_cheese == "Y":
+    bill += 1
+
+# Display the final bill
+print(f"Your final bill is: ${bill:.2f}.")
