@@ -1,0 +1,17 @@
+# Prompt the user to input a list of student scores
+student_scores_input = input("Enter the list of student scores, separated by spaces: ").split()
+
+# Convert input list to integers and handle invalid inputs
+try:
+    student_scores = [int(score) for score in student_scores_input]
+except ValueError:
+    print("Please enter valid numbers for the scores.")
+    exit()
+
+# Check if the list is empty
+if not student_scores:
+    print("No scores were entered.")
+else:
+    # Find the highest score
+    highest_score = max(student_scores)
+    print(f"The highest score in the class is: {highest_score}")
